@@ -1,5 +1,6 @@
 import { WorkGallery } from "@/components/sections/work-gallery/WorkGallery";
 import { Contact } from "@/components/sections/Contact";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +14,9 @@ export default function WorkGalleryPage() {
       <div className="pt-24 md:pt-32">
         <WorkGallery />
       </div>
-      <Contact />
+      <ScrollReveal>
+        <Contact />
+      </ScrollReveal>
     </main>
   );
 }
