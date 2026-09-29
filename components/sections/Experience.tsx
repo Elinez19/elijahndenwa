@@ -2,30 +2,10 @@
 
 import { motion } from "framer-motion";
 import { Users, Code, Search, Brackets, Megaphone } from "lucide-react";
+import { portfolioData } from "@/data/content";
 
 export function Experience() {
-  const principles = [
-    {
-      title: "The User Comes First.",
-      description: "A Feature Isn't Successful Because It Works. It's Successful When Users Can Understand It, Navigate It Easily, And Enjoy Using It."
-    },
-    {
-      title: "AI Can Write Code. I Own The Code.",
-      description: "AI Helps Me Move Faster, But Every Generated Line Is Reviewed, Tested, Refactored, And Understood Before It Ships."
-    },
-    {
-      title: "\"It Works\" Is Not The Finish Line.",
-      description: "I Test Beyond The Happy Path, Think Through Failure States, And Make Sure New Changes Don't Introduce Problems Into Production."
-    },
-    {
-      title: "Build For The Next Engineer.",
-      description: "Code Should Be Easy To Understand, Maintain, And Hand Over. I Write With The Next Developer In Mind, Not Just Today's Deadline."
-    },
-    {
-      title: "Fast Doesn't Mean Careless.",
-      description: "I Move Quickly Without Cutting Corners. Good Processes, Early Testing, And Clear Communication Let Me Ship Faster Without Creating Tomorrow's Problems."
-    }
-  ];
+  const experienceList = portfolioData.experience;
 
   return (
     <section id="experience" className="py-24 relative z-20">
@@ -41,19 +21,19 @@ export function Experience() {
             className="md:w-[30%] sticky top-32"
           >
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4 relative inline-block">
-              How I<br/>Work
+              My<br/>Experience
               <svg className="absolute -bottom-2 left-0 w-3/4 h-3 text-[#F1C865]" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0,5 Q50,10 100,5" fill="none" stroke="currentColor" strokeWidth="4" />
               </svg>
             </h2>
             <p className="text-foreground/80 font-bold tracking-wide text-xs uppercase leading-relaxed mt-8">
-              A Few Principles I Bring Into<br/>Every Product I Work On.
+              Where I've Worked And What I've Accomplished.
             </p>
           </motion.div>
 
           {/* Right Column */}
           <div className="md:w-[70%] space-y-6">
-            {principles.map((exp, index) => (
+            {experienceList.map((exp, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -69,8 +49,12 @@ export function Experience() {
                 
                 {/* Content */}
                 <div className="flex-grow pl-6 md:pl-8 border-l-2 border-[#F1C865]">
-                  <h3 className="text-xl font-bold text-[#30231D] mb-2 font-serif">{exp.title}</h3>
-                  <p className="text-[#30231D]/80 leading-relaxed font-bold text-xs md:text-xs">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                    <h3 className="text-xl font-bold text-[#30231D] font-serif">{exp.role}</h3>
+                    <span className="text-xs font-bold text-[#F1C865] mt-1 sm:mt-0">{exp.date}</span>
+                  </div>
+                  <div className="font-bold text-[#30231D]/80 text-sm mb-2">{exp.company}</div>
+                  <p className="text-[#30231D]/80 leading-relaxed font-medium text-xs md:text-sm">
                     {exp.description}
                   </p>
                 </div>

@@ -5,6 +5,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import { CtaButton } from "@/components/ui/CtaButton";
+import { portfolioData } from "@/data/content";
 
 export function Hero() {
   return (
@@ -32,8 +33,8 @@ export function Hero() {
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-8 bg-white/70 backdrop-blur-sm shadow-sm rotate-[-3deg] z-10 border border-black/5" />
               
               <div className="aspect-[4/5] bg-muted overflow-hidden relative">
-                 {/* Placeholder for the user's photo */}
-                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800')] bg-cover bg-center" />
+                 {/* The user's photo */}
+                 <div className="absolute inset-0 bg-[url('/profile.jpg')] bg-cover bg-center" />
               </div>
             </div>
           </motion.div>
@@ -46,11 +47,11 @@ export function Hero() {
             className="w-full md:w-7/12"
           >
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-foreground mb-6 leading-[1.1] tracking-tight">
-              I Build Mobile Products That Look Good And Work Even Better.
+              {portfolioData.hero.headline}
             </h1>
             
             <p className="text-lg md:text-xl text-foreground/80 mb-10 max-w-xl font-medium leading-relaxed">
-              Based in Nigeria, specializing in UI/UX design. I design elegant, user-centric solutions to elevate the digital experience of businesses.
+              {portfolioData.hero.subheadline}
             </p>
             
             <div className="flex flex-wrap items-center gap-6 relative">

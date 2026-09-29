@@ -87,79 +87,29 @@ export function Services() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Card 1 */}
-          <div className="bg-[#2A1F1A] text-white rounded-[2rem] p-8 md:p-10 relative shadow-xl flex flex-col">
-            {/* Sticky Note */}
-            <div className="absolute -top-4 -right-4 bg-[#F1C865] text-[#30231D] font-bold text-[0.6rem] py-2 px-4 rounded-sm shadow-md transform rotate-6 border border-black/10 w-24 text-center">
-              Best For MVPs &<br/>Startups
-            </div>
-            
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-[#F1C865] font-bold text-lg">01</span>
-              <div className="w-6 h-[2px] bg-[#F1C865]" />
-            </div>
-            <h3 className="text-3xl font-serif mb-4">Focused<br/>Build</h3>
-            <p className="text-[#D1D5DB] text-[0.7rem] font-bold mb-8 h-12 leading-relaxed">For Startups That Need A Mobile Product Built Properly From Start To Launch.</p>
-            
-            <div className="text-4xl font-bold text-white mb-1">$3k - $6k</div>
-            <p className="text-[#D1D5DB] text-[0.65rem] uppercase tracking-widest font-bold mb-8">1 - 3 Months</p>
-            
-            <ul className="space-y-4 mb-10 flex-grow">
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> MVPs, Major Features Or Rebuilds</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> iOS And Android App</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> Figma To Code</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> API Integrations, Auth, Payments etc.</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> App Store & Play Store Launch</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> 30 Days Post-Launch Support</li>
-            </ul>
-            <CtaButton href="#contact" variant="light" className="w-full shadow-none text-xs py-3 mt-auto rounded-full">Discuss Your Project</CtaButton>
-          </div>
-
-          {/* Card 2 */}
-          <div className="bg-[#464D61] text-white rounded-[2rem] p-8 md:p-10 relative shadow-xl flex flex-col">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-[#F1C865] font-bold text-lg">02</span>
-              <div className="w-6 h-[2px] bg-[#F1C865]" />
-            </div>
-            <h3 className="text-3xl font-serif mb-4">Marketing<br/>Website</h3>
-            <p className="text-[#D1D5DB] text-[0.7rem] font-bold mb-8 h-12 leading-relaxed">A Website That Looks Premium, Loads Fast, And Drives Action.</p>
-            
-            <div className="text-4xl font-bold text-white mb-1">$1k - $1.5k</div>
-            <p className="text-[#D1D5DB] text-[0.65rem] uppercase tracking-widest font-bold mb-8">1 - 2 Weeks</p>
-            
-            <ul className="space-y-4 mb-10 flex-grow">
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> Dynamic Website</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> Responsive Development</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> SEO Foundations</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> Analytics Setup</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> Hosting And Domain Support</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> Performance Optimization</li>
-            </ul>
-            <CtaButton href="#contact" variant="light" className="w-full shadow-none text-xs py-3 mt-auto rounded-full">Build My Website</CtaButton>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-[#5A6072] text-white rounded-[2rem] p-8 md:p-10 relative shadow-xl flex flex-col">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-[#F1C865] font-bold text-lg">03</span>
-              <div className="w-6 h-[2px] bg-[#F1C865]" />
-            </div>
-            <h3 className="text-3xl font-serif mb-4">Embedded<br/>Engineer</h3>
-            <p className="text-[#D1D5DB] text-[0.7rem] font-bold mb-8 h-12 leading-relaxed">More Engineering Capacity To Help Your Team Ship Consistently.</p>
-            
-            <div className="text-3xl lg:text-4xl font-bold text-white mb-1">From $1k / Mo</div>
-            <p className="text-[#D1D5DB] text-[0.65rem] uppercase tracking-widest font-bold mb-8">Contract-Based</p>
-            
-            <ul className="space-y-4 mb-10 flex-grow">
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> New Feature Development</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> API Integrations</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> Bug Fixes & Maintenance</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> Code Reviews</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> Product & Engineering Collaboration</li>
-               <li className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> AI Assistant Development</li>
-            </ul>
-            <CtaButton href="#contact" variant="light" className="w-full shadow-none text-xs py-3 mt-auto rounded-full">Work With Me</CtaButton>
-          </div>
+          {portfolioData.services.map((service, index) => {
+            const bgColors = ["bg-[#2A1F1A]", "bg-[#464D61]", "bg-[#5A6072]"];
+            const bgColor = bgColors[index % bgColors.length];
+            return (
+              <div key={index} className={`${bgColor} text-white rounded-[2rem] p-8 md:p-10 relative shadow-xl flex flex-col`}>
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-[#F1C865] font-bold text-lg">0{index + 1}</span>
+                  <div className="w-6 h-[2px] bg-[#F1C865]" />
+                </div>
+                <h3 className="text-3xl font-serif mb-4">{service.title}</h3>
+                <p className="text-[#D1D5DB] text-[0.7rem] font-bold mb-8 h-12 leading-relaxed">{service.description}</p>
+                
+                <p className="text-[#D1D5DB] text-[0.65rem] uppercase tracking-widest font-bold mb-8">{service.price}</p>
+                
+                <ul className="space-y-4 mb-10 flex-grow">
+                   {service.features.map((feature, fIndex) => (
+                     <li key={fIndex} className="flex items-start text-xs font-bold text-[#E5E7EB]"><Check className="w-4 h-4 text-[#F1C865] mr-3 shrink-0" /> {feature}</li>
+                   ))}
+                </ul>
+                <CtaButton href="#contact" variant="light" className="w-full shadow-none text-xs py-3 mt-auto rounded-full">Work With Me</CtaButton>
+              </div>
+            );
+          })}
         </div>
       </div>
 

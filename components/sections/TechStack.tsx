@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { portfolioData } from "@/data/content";
 
 export function TechStack() {
   return (
@@ -26,7 +27,7 @@ export function TechStack() {
         </motion.div>
 
         <div className="space-y-6">
-          {/* Card 1: Mobile */}
+          {/* Card 1: Front-End */}
           <div className="bg-[#FCF9EC] rounded-[1rem] p-8 md:p-12 border border-[#E9E0C8] shadow-sm flex flex-col md:flex-row items-center gap-8 md:gap-16 relative overflow-hidden">
              {/* Faint scribble background decoration */}
              <svg className="absolute top-0 right-0 w-64 h-full text-[#E9E0C8]/30 opacity-50 pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -35,26 +36,20 @@ export function TechStack() {
 
              <div className="w-full md:w-1/4 flex items-start gap-2 relative z-10">
                <span className="text-[#F1C865] font-bold text-sm mt-2">01</span>
-               <div className="font-serif text-4xl font-bold text-[#30231D]">Mobile</div>
+               <div className="font-serif text-4xl font-bold text-[#30231D]">Front-End</div>
              </div>
              
              <div className="w-full md:w-3/4 flex flex-wrap gap-6 relative z-10">
-               <div className="flex items-center gap-2 text-xs font-bold text-[#30231D]">
-                 <div className="w-6 h-6 bg-cyan-400 rounded-sm flex items-center justify-center text-white text-[10px]">R</div>
-                 React Native
-               </div>
-               <div className="flex items-center gap-2 text-xs font-bold text-[#30231D]">
-                 <div className="w-6 h-6 bg-black rounded-sm flex items-center justify-center text-white text-[10px]">E</div>
-                 Expo
-               </div>
-               <div className="flex items-center gap-2 text-xs font-bold text-[#30231D]">
-                 <div className="w-6 h-6 bg-blue-600 rounded-sm flex items-center justify-center text-white text-[10px]">TS</div>
-                 Typescript
-               </div>
+               {portfolioData.techStack.frontend.map((tech, index) => (
+                 <div key={index} className="flex items-center gap-2 text-xs font-bold text-[#30231D]">
+                   <div className="w-6 h-6 bg-black rounded-sm flex items-center justify-center text-white text-[10px]">{tech.charAt(0)}</div>
+                   {tech}
+                 </div>
+               ))}
              </div>
           </div>
 
-          {/* Card 2: Front-End */}
+          {/* Card 2: Back-End */}
           <div className="bg-[#FCF9EC] rounded-[1rem] p-8 md:p-12 border border-[#E9E0C8] shadow-sm flex flex-col md:flex-row items-center gap-8 md:gap-16 relative overflow-hidden">
              {/* Faint scribble background decoration */}
              <svg className="absolute top-0 right-0 w-64 h-full text-[#E9E0C8]/30 opacity-50 pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -63,30 +58,16 @@ export function TechStack() {
 
              <div className="w-full md:w-1/4 flex items-start gap-2 relative z-10">
                <span className="text-[#F1C865] font-bold text-sm mt-2">02</span>
-               <div className="font-serif text-4xl font-bold text-[#30231D]">Front-End</div>
+               <div className="font-serif text-4xl font-bold text-[#30231D]">Back-End</div>
              </div>
              
              <div className="w-full md:w-3/4 flex flex-wrap gap-8 relative z-10">
-               <div className="flex items-center gap-2 text-xs font-bold text-[#30231D]">
-                 <div className="w-6 h-6 bg-cyan-400 rounded-sm flex items-center justify-center text-white text-[10px]">R</div>
-                 React.js
-               </div>
-               <div className="flex items-center gap-2 text-xs font-bold text-[#30231D]">
-                 <div className="w-6 h-6 bg-black rounded-sm flex items-center justify-center text-white text-[10px]">N</div>
-                 Next.js
-               </div>
-               <div className="flex items-center gap-2 text-xs font-bold text-[#30231D]">
-                 <div className="w-6 h-6 bg-yellow-400 rounded-sm flex items-center justify-center text-black text-[10px]">JS</div>
-                 Javascript
-               </div>
-               <div className="flex items-center gap-2 text-xs font-bold text-[#30231D]">
-                 <div className="w-6 h-6 bg-cyan-500 rounded-sm flex items-center justify-center text-white text-[10px]">TW</div>
-                 Tailwind CSS
-               </div>
-               <div className="flex items-center gap-2 text-xs font-bold text-[#30231D]">
-                 <div className="w-6 h-6 bg-blue-600 rounded-sm flex items-center justify-center text-white text-[10px]">TS</div>
-                 Typescript
-               </div>
+               {portfolioData.techStack.backend.map((tech, index) => (
+                 <div key={index} className="flex items-center gap-2 text-xs font-bold text-[#30231D]">
+                   <div className="w-6 h-6 bg-black rounded-sm flex items-center justify-center text-white text-[10px]">{tech.charAt(0)}</div>
+                   {tech}
+                 </div>
+               ))}
              </div>
           </div>
         </div>
