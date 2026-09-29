@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { portfolioData } from "@/data/content";
 
 export function CTA() {
   return (
@@ -21,7 +22,7 @@ export function CTA() {
         
         <div className="pt-8">
           <Link 
-            href="mailto:hello@example.com"
+            href={`mailto:${portfolioData.contact.email}`}
             className="inline-block bg-[#F1C865] text-[#30231D] font-bold font-serif px-8 py-4 rounded-full text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
           >
             Discuss Your Project
