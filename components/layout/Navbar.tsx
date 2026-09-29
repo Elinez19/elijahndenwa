@@ -1,13 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CtaButton } from "@/components/ui/CtaButton";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const [activeHash, setActiveHash] = useState("");
+
+  useEffect(() => {
+    setActiveHash(window.location.hash);
+    
+    const onHashChange = () => {
+      setActiveHash(window.location.hash);
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, [pathname]);
+
+  const getIsActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/' && !activeHash;
+    }
+    if (href.startsWith('/#')) {
+      return pathname === '/' && activeHash === href.replace('/', '');
+    }
+    return pathname === href;
+  };
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -36,12 +59,19 @@ export function Navbar() {
                 <div key={link.name} className="relative group">
                   <Link
                     href={link.href}
+                    onClick={() => {
+                      if (link.href.startsWith('/#')) {
+                        setActiveHash(link.href.replace('/', ''));
+                      } else {
+                        setActiveHash('');
+                      }
+                    }}
                     className="hover:text-[#30231D]/70 transition-colors text-lg font-bold tracking-wide"
                   >
                     {link.name}
                   </Link>
                   {/* Yellow scribble underline for active link */}
-                  {link.name === "Home" && (
+                  {getIsActive(link.href) && (
                     <svg className="absolute -bottom-2 left-0 w-full h-2 text-[#F1C865]" viewBox="0 0 100 10" preserveAspectRatio="none">
                       <path d="M0,5 Q30,10 50,4 T70,8 T100,4" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" />
                     </svg>
@@ -81,8 +111,20 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="hover:bg-black/5 block px-3 py-2 rounded-md text-base font-bold"
+                onClick={() => {
+                  setIsOpen(false);
+                  if (link.href.startsWith('/#')) {
+                    setActiveHash(link.href.replace('/', ''));
+                  } else {
+                    setActiveHash('');
+                  }
+                }}
+                className={cn(
+                  "block px-3 py-2 rounded-md text-base font-bold transition-colors",
+                  getIsActive(link.href) 
+                    ? "text-[#F1C865] bg-black/5" 
+                    : "hover:bg-black/5"
+                )}
               >
                 {link.name}
               </Link>
