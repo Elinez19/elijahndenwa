@@ -55,7 +55,7 @@ export function Hero() {
             </p>
             
             <div className="flex flex-wrap items-center gap-6 relative">
-              <CtaButton href="#contact" variant="dark" withArrow>
+              <CtaButton href="https://calendly.com/elijahndenwa/30min" target="_blank" rel="noopener noreferrer" variant="dark" withArrow>
                 Book A Call
               </CtaButton>
               {/* Red arrow pointing to Book A Call */}

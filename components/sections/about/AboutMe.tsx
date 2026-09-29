@@ -28,14 +28,23 @@ export function AboutMe() {
           </div>
         </div>
 
-        <div className="relative h-[400px] sm:h-[500px] md:h-[600px] w-full flex justify-center items-center mt-12 lg:mt-0">
-          <div className="absolute w-[70%] sm:w-[60%] top-10 z-20">
+        <div className="relative h-100 sm:h-125 md:h-150 w-full flex justify-center items-center mt-12 lg:mt-0">
+          <div className="absolute w-[60%] left-0 sm:left-[5%] top-4 sm:top-0 z-10 transition-transform hover:z-30 hover:scale-105 duration-300">
             <Polaroid
               src="/profile.jpg"
               alt="Elijah Ndenwa"
-              rotation={2}
-              tapeTopRight
+              rotation={-4}
+              tapeTopLeft
               caption="Building software that works."
+            />
+          </div>
+          <div className="absolute w-[60%] right-0 sm:right-[5%] top-24 sm:top-20 z-20 transition-transform hover:z-30 hover:scale-105 duration-300">
+            <Polaroid
+              src="/profile2.png"
+              alt="Elijah Ndenwa in a suit"
+              rotation={3}
+              tapeTopRight
+              caption="Speaking to inspire."
             />
           </div>
         </div>

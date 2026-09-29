@@ -11,9 +11,10 @@ export function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Work", href: "#work" },
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#experience" },
+    { name: "Work", href: "/work-gallery" },
+    { name: "Hire Me", href: "/#services" },
+    { name: "About", href: "/about" },
+    { name: "Testimonials", href: "/#testimonials" },
   ];
 
   return (
@@ -51,7 +52,9 @@ export function Navbar() {
           </div>
           <div className="hidden md:flex">
              <CtaButton
-                href="#contact"
+                href="https://calendly.com/elijahndenwa/30min"
+                target="_blank" 
+                rel="noopener noreferrer"
                 variant="dark"
                 className="py-2.5 px-6 text-sm"
               >
@@ -85,7 +88,9 @@ export function Navbar() {
               </Link>
             ))}
             <CtaButton
-              href="#contact"
+              href="https://calendly.com/elijahndenwa/30min"
+              target="_blank" 
+              rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
               variant="dark"
               className="w-full mt-4 py-3"

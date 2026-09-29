@@ -25,7 +25,7 @@ export function Contact() {
               <div className="h-[2px] w-12 bg-[#F1C865]" />
             </div>
             
-            <CtaButton href={`mailto:${portfolioData.contact.email}`} variant="light" withArrow className="mt-4">
+            <CtaButton href="https://calendly.com/elijahndenwa/30min" target="_blank" rel="noopener noreferrer" variant="light" withArrow className="mt-4">
               Book A Call
             </CtaButton>
           </motion.div>

@@ -11,7 +11,7 @@ export function OutsideCode() {
       </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <div className="relative aspect-[4/3] w-full max-w-lg mx-auto rounded-2xl overflow-hidden border-[12px] border-[#30231D] shadow-2xl bg-[#30231D] p-2 flex justify-center items-center">
+        <div className="relative aspect-4/3 w-full max-w-lg mx-auto rounded-2xl overflow-hidden border-12 border-[#30231D] shadow-2xl bg-[#30231D] p-2 flex justify-center items-center">
           {/* Vintage TV mockup */}
           <div className="relative w-full h-full border-4 border-[#4A3A31] rounded-xl overflow-hidden bg-black flex flex-col justify-center gap-1 p-1">
             <div className="grid grid-cols-2 gap-1 h-full relative">

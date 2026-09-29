@@ -121,7 +121,7 @@ export function Services() {
                <p className="text-sm font-bold text-[#30231D]/80">Tell me what you are building, and I will recommend the best way to<br/>move forward.</p>
             </div>
             <div className="md:w-1/3 flex justify-end">
-               <CtaButton href="#contact" variant="dark" className="px-6 py-4 text-sm w-full md:w-auto">
+               <CtaButton href="https://calendly.com/elijahndenwa/30min" target="_blank" rel="noopener noreferrer" variant="dark" className="px-6 py-4 text-sm w-full md:w-auto">
                  Book A Call With Me
                </CtaButton>
             </div>
